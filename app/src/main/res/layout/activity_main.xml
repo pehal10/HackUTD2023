@@ -2,89 +2,48 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/analysisButton"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/approvalRating"
-        android:layout_width="184dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="88dp"
-        android:text="Your approval rating is:"
+        android:id="@+id/EntryTitle"
+        android:layout_width="200dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="204dp"
+        android:text="Welcome to Mae-Proval"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.581"
+        app:layout_constraintHorizontal_bias="0.549"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="409dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="64dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toTopOf="@+id/metricsToImprove"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/metricsToImprove"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="174dp"
-        android:layout_marginEnd="174dp"
-        android:layout_marginBottom="220dp"
-        android:text="Metrics to Improve:"
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="200dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="368dp"
+        android:text="Get Your Analysis Now!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="63dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="174dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="174dp"
-        android:src="@android:drawable/btn_star"
+    <EditText
+        android:id="@+id/UserID"
+        android:layout_width="163dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:hint="Input User ID"
+        android:inputType="numberDecimal"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/button1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/approvalRating" />
-
-    <TextView
-        android:id="@+id/creditRating"
-        android:layout_width="117dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="278dp"
-        android:layout_marginBottom="23dp"
-        android:text="Credit Rating:"
-        app:layout_constraintBottom_toTopOf="@+id/LTV"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/LTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="23dp"
-        android:text="Loan-to-Value:"
-        app:layout_constraintBottom_toTopOf="@+id/DTI"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/DTI"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="39dp"
-        android:text="Debt-to-income-ratio:"
-        app:layout_constraintBottom_toTopOf="@+id/divider2"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/EntryTitle"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
