@@ -7,24 +7,43 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <TextView
+        android:id="@+id/entryTitle"
+        android:layout_width="128dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/aclonica"
+        android:text="MaeProval"
+        android:textColor="#013220"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.758"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/EntryTitle"
-        android:layout_width="200dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="204dp"
-        android:text="Welcome to Mae-Proval"
+        android:layout_width="128dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="serif"
+        android:text="Welcome to"
+        android:textColor="#013220"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintHorizontal_bias="0.277"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="200dp"
-        android:layout_height="59dp"
+        android:layout_width="230dp"
+        android:layout_height="56dp"
         android:layout_marginStart="48dp"
         android:layout_marginEnd="49dp"
-        android:layout_marginBottom="368dp"
+        android:layout_marginBottom="548dp"
+        android:fontFamily="serif"
         android:text="Get Your Analysis Now!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,18 +51,114 @@
 
     <EditText
         android:id="@+id/UserID"
-        android:layout_width="163dp"
-        android:layout_height="65dp"
+        android:layout_width="175dp"
+        android:layout_height="83dp"
         android:layout_marginTop="18dp"
-        android:layout_marginEnd="124dp"
+        android:layout_marginEnd="108dp"
         android:layout_marginBottom="12dp"
         android:ems="10"
+        android:fontFamily="serif"
         android:hint="Input User ID"
         android:inputType="numberDecimal"
+        android:textColorHint="#013220"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/button1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EntryTitle"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.576" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="15dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/metricsToImprove"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/metricsToImprove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="286dp"
+        android:text="Metrics to Improve:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/divider2" />
+
+    <TextView
+        android:id="@+id/creditRating"
+        android:layout_width="117dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="278dp"
+        android:layout_marginBottom="23dp"
+        android:text="Credit Rating:"
+        app:layout_constraintBottom_toTopOf="@+id/LTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/CreditRatingRESULT"
+        android:layout_width="117dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="16dp"
+        android:text="Y"
+        app:layout_constraintBottom_toTopOf="@id/LTVRESULT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/creditRating" />
+
+    <TextView
+        android:id="@+id/DTIRESULT"
+        android:layout_width="117dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="47dp"
+        android:text="Y"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/DTI" />
+
+    <TextView
+        android:id="@+id/LTVRESULT"
+        android:layout_width="117dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="23dp"
+        android:text="Y"
+        app:layout_constraintBottom_toTopOf="@+id/DTIRESULT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/LTV" />
+
+    <TextView
+        android:id="@+id/LTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="23dp"
+        android:text="Loan-to-Value:"
+        app:layout_constraintBottom_toTopOf="@+id/DTI"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/DTI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="39dp"
+        android:text="Debt-to-income-ratio:"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
